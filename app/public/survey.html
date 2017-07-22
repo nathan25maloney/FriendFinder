@@ -233,7 +233,9 @@
 	    		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
 	    		$("#matchName").text(data.name);
 	    		$('#matchImg').attr("src", data.photo);
-	    		$('#matchScore').text(data.matchScore);
+	    		let matchText = `Your Match Score is: ${data.matchScore}
+	    		The lower the Match Score the more compatible you are!`
+	    		$('#matchScore').text(matchText);
 		    	// Show the modal with the best match 
 		    	$("#resultsModal").modal('toggle');
 
